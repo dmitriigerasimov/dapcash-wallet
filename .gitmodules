@@ -1,0 +1,3 @@
+[submodule "libdap-qt-ui"]
+	path = libdap-qt-ui
+	url = https://github.com/demlabsinc/libdap-qt-ui.git

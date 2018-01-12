@@ -1,0 +1,46 @@
+#include "DapChainPointClient.h"
+
+DapChainPointClient::DapChainPointClient(QObject *a_p) : QObject(a_p)
+{
+    sockCtl = new SapUiSocket();
+
+    connect(sockCtl,&SapUiSocket::readyRead,this, &DapChainPointClient::readReady);
+    /*
+    connect(sockCtl,static_cast<void(SapUiSocket::*)(SapUiSocketError)> (&SapUiSocket::error) ,
+            this, &SapServiceClient::onCtlSocketError );
+    connect(sockCtl,&SapUiSocket::connected, this, &SapServiceClient::ctlConnected);
+
+    connect(sockCtl,&SapUiSocket::disconnected, this, &SapServiceClient::ctlDisconnected);
+    */
+}
+
+void DapChainPointClient::readReady()
+{
+    QString readStr = QString::fromLatin1( sockCtl->readAll());
+    int nInd;
+lb_read_str:
+
+    if((nInd=readStr.indexOf('\n'))==-1 ){
+        qDebug() << "[SapServiceClient] No CR symbol";
+        readStrBuffer += readStr;
+    }else{
+        readStrBuffer += readStr.left(nInd);
+        procCmd(readStrBuffer);
+        readStr= readStr.mid(nInd+1);
+        readStrBuffer.clear();
+        if(readStr.length()>0){
+            goto lb_read_str;
+        }
+    }
+}
+
+
+void DapChainPointClient::procCmd(const QString & a_cmd)
+{
+    QStringList infos = a_cmd.split(' ');
+    if(infos.length() > 0){
+        qDebug () << "ok";
+    }else{
+        qWarning() << "[ServiceCtl] Empty reply from backend service";
+    }
+}
