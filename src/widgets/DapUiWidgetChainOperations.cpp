@@ -14,10 +14,10 @@ DapUiWidgeChainOperations::DapUiWidgeChainOperations(QWidget * a_w) : DapUiWidge
     layout()->addWidget(l_moneySend);
 
     connect(l_moneySend, &QPushButton::clicked, [=]{
-        DapChainPointClient::me().sendMsg("clicked DapUiWidgeChainOperations moneySend")
+        DapChainPointClient::me().sendMsg("clicked DapUiWidgeChainOperations moneySend");
     });
 
     connect(l_moneyRequest, &QPushButton::clicked, [=]{
-        DapChainPointClient::me().sendMsg("clicked DapUiWidgeChainOperations moneyRequest")
+        DapChainPointClient::me().sendMsg("clicked DapUiWidgeChainOperations moneyRequest");
     });
 }
