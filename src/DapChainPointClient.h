@@ -13,10 +13,15 @@ class DapChainPointClient : public QObject
     SapUiSocket * sockCtl;
     QString readStrBuffer;
     void procCmd(const QString & a_cmd);
-public:
     DapChainPointClient(QObject *a_p = 0);
+public:
+    static DapChainPointClient& me(){
+        static DapChainPointClient _me; return _me;
+    }
 public slots:
     void readReady();
+signals:
+    void sigSetDapUiScreenDashboard();
 };
 
 #endif // DAPCHAINPOINTCLIENT_H

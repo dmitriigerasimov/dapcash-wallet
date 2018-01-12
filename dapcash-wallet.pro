@@ -30,29 +30,29 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-        main.cpp \
-        MainWindow.cpp \
-    DapChainPointClient.cpp \
-    screens/DapUiScreenDashboard.cpp \
-    widgets/DapUiWidgetChainBallance.cpp \
-    widgets/DapUiWidgetChainTransctions.cpp \
-    widgets/DapUiWidgetChainBlockExplorer.cpp \
-    widgets/DapUiWidgetChainOperations.cpp \
-    widgets/DapUiWidgetChainNodeLogs.cpp \
-    dialogs/DapUiScreenDialogAbstract.cpp \
-    widgets/DapUiWidgetAbstract.cpp
+    src/main.cpp \
+    src/MainWindow.cpp \
+    src/DapChainPointClient.cpp \
+    src/screens/DapUiScreenDashboard.cpp \
+    src/widgets/DapUiWidgetChainBallance.cpp \
+    src/widgets/DapUiWidgetChainTransctions.cpp \
+    src/widgets/DapUiWidgetChainBlockExplorer.cpp \
+    src/widgets/DapUiWidgetChainOperations.cpp \
+    src/widgets/DapUiWidgetChainNodeLogs.cpp \
+    src/dialogs/DapUiScreenDialogAbstract.cpp \
+    src/widgets/DapUiWidgetAbstract.cpp
 
 HEADERS += \
-        MainWindow.h \
-    DapChainPointClient.h \
-    screens/DapUiScreenDashboard.h \
-    widgets/DapUiWidgetChainBallance.h \
-    widgets/DapUiWidgetChainTransctions.h \
-    widgets/DapUiWidgetChainBlockExplorer.h \
-    widgets/DapUiWidgetChainOperations.h \
-    widgets/DapUiWidgetChainNodeLogs.h \
-    dialogs/DapUiScreenDialogAbstract.h \
-    widgets/DapUiWidgetAbstract.h
+        src/MainWindow.h \
+    src/DapChainPointClient.h \
+    src/screens/DapUiScreenDashboard.h \
+    src/widgets/DapUiWidgetChainBallance.h \
+    src/widgets/DapUiWidgetChainTransctions.h \
+    src/widgets/DapUiWidgetChainBlockExplorer.h \
+    src/widgets/DapUiWidgetChainOperations.h \
+    src/widgets/DapUiWidgetChainNodeLogs.h \
+    src/dialogs/DapUiScreenDialogAbstract.h \
+    src/widgets/DapUiWidgetAbstract.h
 
 FORMS += \
     ui/DapUiScreenDashboard.ui

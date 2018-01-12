@@ -3,7 +3,7 @@
 
 #include "libdap-qt-ui/DapUiScreen.h"
 
-class DapUiScreenDashboard : DapUiScreen
+class DapUiScreenDashboard : public DapUiScreen
 {
     Q_OBJECT
 public:

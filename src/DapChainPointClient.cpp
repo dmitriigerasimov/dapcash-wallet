@@ -39,7 +39,11 @@ void DapChainPointClient::procCmd(const QString & a_cmd)
 {
     QStringList infos = a_cmd.split(' ');
     if(infos.length() > 0){
-        qDebug () << "ok";
+        if (infos[1] == "set") {
+            if (infos[2] == "DapUiScreenDashboard") {
+                emit sigSetDapUiScreenDashboard();
+            }
+        }
     }else{
         qWarning() << "[ServiceCtl] Empty reply from backend service";
     }
