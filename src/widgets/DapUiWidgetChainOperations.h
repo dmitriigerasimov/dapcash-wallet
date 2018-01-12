@@ -1,7 +1,7 @@
 #ifndef DAPUIWIDGECHAINOPERATIONS_H
 #define DAPUIWIDGECHAINOPERATIONS_H
 
-#include "widgets/DapUiWidgetAbstract.h"
+#include "src/widgets/DapUiWidgetAbstract.h"
 
 class DapUiWidgeChainOperations  : public DapUiWidgetAbstract
 {
