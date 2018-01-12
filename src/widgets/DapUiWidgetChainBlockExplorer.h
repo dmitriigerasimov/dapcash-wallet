@@ -1,7 +1,7 @@
 #ifndef DAPUIWIDGETCHAINBLOCKEXPLORER_H
 #define DAPUIWIDGETCHAINBLOCKEXPLORER_H
 
-#include "widgets/DapUiWidgetAbstract.h"
+#include "src/widgets/DapUiWidgetAbstract.h"
 
 class DapUiWidgetChainBlockExplorer  : public DapUiWidgetAbstract
 {

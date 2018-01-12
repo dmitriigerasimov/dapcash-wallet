@@ -1,7 +1,7 @@
 #ifndef DAPUIWIDGETCHAINNODELOGS_H
 #define DAPUIWIDGETCHAINNODELOGS_H
 
-#include "widgets/DapUiWidgetAbstract.h"
+#include "src/widgets/DapUiWidgetAbstract.h"
 
 class DapUiWidgetChainNodeLogs  : public DapUiWidgetAbstract
 {

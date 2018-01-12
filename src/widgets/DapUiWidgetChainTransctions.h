@@ -1,7 +1,7 @@
 #ifndef DAPUIWIDGETCHAINTRANSCTIONS_H
 #define DAPUIWIDGETCHAINTRANSCTIONS_H
 
-#include "widgets/DapUiWidgetAbstract.h"
+#include "src/widgets/DapUiWidgetAbstract.h"
 
 class DapUiWidgetChainTransctions  : public DapUiWidgetAbstract
 {

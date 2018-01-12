@@ -1,7 +1,7 @@
 #ifndef DAPUIWIDGETCHAINBALLANCE_H
 #define DAPUIWIDGETCHAINBALLANCE_H
 
-#include "widgets/DapUiWidgetAbstract.h"
+#include "src/widgets/DapUiWidgetAbstract.h"
 
 class DapUiWidgetChainBallance : public DapUiWidgetAbstract
 {
