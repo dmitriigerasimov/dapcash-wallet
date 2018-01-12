@@ -33,14 +33,22 @@ SOURCES += \
         main.cpp \
         MainWindow.cpp \
     DapChainPointClient.cpp \
-    DapUi/screens/DapUiScreenDashboard.cpp \
-    DapUi/widgets/DapUiWidgetChainBallance.cpp
+    screens/DapUiScreenDashboard.cpp \
+    widgets/DapUiWidgetChainBallance.cpp \
+    widgets/DapUiWidgetChainTransctions.cpp \
+    widgets/DapUiWidgetChainBlockExplorer.cpp \
+    widgets/DapUiWidgetChainOperations.cpp \
+    widgets/DapUiWidgetChainNodeLogs.cpp
 
 HEADERS += \
         MainWindow.h \
     DapChainPointClient.h \
-    DapUi/screens/DapUiScreenDashboard.h \
-    DapUi/widgets/DapUiWidgetChainBallance.h
+    screens/DapUiScreenDashboard.h \
+    widgets/DapUiWidgetChainBallance.h \
+    widgets/DapUiWidgetChainTransctions.h \
+    widgets/DapUiWidgetChainBlockExplorer.h \
+    widgets/DapUiWidgetChainOperations.h \
+    widgets/DapUiWidgetChainNodeLogs.h
 
 FORMS += \
     ui/DapUiScreenDashboard.ui
