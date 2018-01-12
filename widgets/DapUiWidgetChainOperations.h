@@ -1,11 +1,13 @@
 #ifndef DAPUIWIDGECHAINOPERATIONS_H
 #define DAPUIWIDGECHAINOPERATIONS_H
 
+#include "widgets/DapUiWidgetAbstract.h"
 
-class DapUiWidgeChainOperations
+class DapUiWidgeChainOperations  : public DapUiWidgetAbstract
 {
+    Q_OBJECT
 public:
-    DapUiWidgeChainOperations();
+    DapUiWidgeChainOperations(QWidget * a_w);
 };
 
 #endif // DAPUIWIDGECHAINOPERATIONS_H

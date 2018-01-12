@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "DapUi/DapUiMainWindow.h"
+#include "libdap-qt-ui/DapUiMainWindow.h"
 
 class MainWindow : public DapUiMainWindow
 {

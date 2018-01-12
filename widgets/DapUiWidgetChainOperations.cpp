@@ -1,6 +1,6 @@
-#include "DapUiWidgeChainOperations.h"
+#include "DapUiWidgetChainOperations.h"
 
-DapUiWidgeChainOperations::DapUiWidgeChainOperations()
+DapUiWidgeChainOperations::DapUiWidgeChainOperations(QWidget * a_w) : DapUiWidgetAbstract(a_w)
 {
-
+    qDebug() << "[M] DapUiWidgeChainOperations::DapUiWidgeChainOperations";
 }

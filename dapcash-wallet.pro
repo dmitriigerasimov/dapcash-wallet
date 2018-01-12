@@ -38,7 +38,9 @@ SOURCES += \
     widgets/DapUiWidgetChainTransctions.cpp \
     widgets/DapUiWidgetChainBlockExplorer.cpp \
     widgets/DapUiWidgetChainOperations.cpp \
-    widgets/DapUiWidgetChainNodeLogs.cpp
+    widgets/DapUiWidgetChainNodeLogs.cpp \
+    dialogs/DapUiScreenDialogAbstract.cpp \
+    widgets/DapUiWidgetAbstract.cpp
 
 HEADERS += \
         MainWindow.h \
@@ -48,7 +50,9 @@ HEADERS += \
     widgets/DapUiWidgetChainTransctions.h \
     widgets/DapUiWidgetChainBlockExplorer.h \
     widgets/DapUiWidgetChainOperations.h \
-    widgets/DapUiWidgetChainNodeLogs.h
+    widgets/DapUiWidgetChainNodeLogs.h \
+    dialogs/DapUiScreenDialogAbstract.h \
+    widgets/DapUiWidgetAbstract.h
 
 FORMS += \
     ui/DapUiScreenDashboard.ui

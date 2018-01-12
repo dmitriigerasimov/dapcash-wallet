@@ -1,11 +1,13 @@
 #ifndef DAPUIWIDGETCHAINNODELOGS_H
 #define DAPUIWIDGETCHAINNODELOGS_H
 
+#include "widgets/DapUiWidgetAbstract.h"
 
-class DapUiWidgetChainNodeLogs
+class DapUiWidgetChainNodeLogs  : public DapUiWidgetAbstract
 {
+    Q_OBJECT
 public:
-    DapUiWidgetChainNodeLogs();
+    DapUiWidgetChainNodeLogs(QWidget * a_w);
 };
 
 #endif // DAPUIWIDGETCHAINNODELOGS_H
