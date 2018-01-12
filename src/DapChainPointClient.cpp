@@ -43,10 +43,10 @@ void DapChainPointClient::procCmd(const QString & a_cmd)
             if (infos[2] == "DapUiScreenDashboard") {
                 emit sigSetDapUiScreenDashboard();
             }
-        }
-
-        if (infos[1] == "new_transaction") {
+        } else if (infos[1] == "new_transaction") {
             emit sigNewTransaction(infos[2]);
+        } else if (infos[1] == "balanceChanged") {
+            emit sigBalanceChanged(infos[2]);
         }
     }else{
         qWarning() << "[ServiceCtl] Empty reply from backend service";
