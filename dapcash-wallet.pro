@@ -56,3 +56,5 @@ HEADERS += \
 
 FORMS += \
     ui/DapUiScreenDashboard.ui
+
+RESOURCES += resources/main.qrc
