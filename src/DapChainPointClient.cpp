@@ -34,6 +34,11 @@ lb_read_str:
     }
 }
 
+void DapChainPointClient::sendMsg(QString a_msg){
+    qDebug()<<a_msg + "Recived";
+    //Q_UNUSED(a_msg);
+}
+
 
 void DapChainPointClient::procCmd(const QString & a_cmd)
 {

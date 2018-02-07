@@ -4,6 +4,7 @@
 
 class DapUiScreenDialogAbstract
 {
+   // Q_OBJECT
 public:
     DapUiScreenDialogAbstract();
 };

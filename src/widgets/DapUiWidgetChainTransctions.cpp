@@ -1,11 +1,15 @@
 #include <QLayout>
 #include "DapUiWidgetChainTransctions.h"
 #include "src/DapChainPointClient.h"
+#include "ui_dapuiwidgetchaintransctions.h"
 
 
 DapUiWidgetChainTransctions::DapUiWidgetChainTransctions(QWidget * a_w) : DapUiWidgetAbstract(a_w)
 {
     qDebug() << "[M] DapUiWidgetChainTransctions::DapUiWidgetChainTransctions";
+    /*Ui::dapuiwidgetchaintransctions thisui;
+    thisui.setupUi(this);*/
+
     m_list = new QListWidget(this);
 
     // add transaction to list

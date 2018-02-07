@@ -17,6 +17,8 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = dapcash-wallet
 TEMPLATE = app
 
+INCLUDEPATH += src/widgets
+
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which has been marked as deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
@@ -40,7 +42,8 @@ SOURCES += \
     src/widgets/DapUiWidgetChainOperations.cpp \
     src/widgets/DapUiWidgetChainNodeLogs.cpp \
     src/dialogs/DapUiScreenDialogAbstract.cpp \
-    src/widgets/DapUiWidgetAbstract.cpp
+    src/widgets/DapUiWidgetAbstract.cpp \
+    src/dialogs/DapUiScreenDialogTemplate.cpp
 
 HEADERS += \
         src/MainWindow.h \
@@ -52,9 +55,12 @@ HEADERS += \
     src/widgets/DapUiWidgetChainOperations.h \
     src/widgets/DapUiWidgetChainNodeLogs.h \
     src/dialogs/DapUiScreenDialogAbstract.h \
-    src/widgets/DapUiWidgetAbstract.h
+    src/widgets/DapUiWidgetAbstract.h \
+    src/dialogs/DapUiScreenDialogTemplate.h
 
 FORMS += \
-    ui/DapUiScreenDashboard.ui
+    ui/DapUiScreenDashboard.ui \
+    ui/dapuiwidgetchaintransctions.ui \
+    ui/DapUiWidgetChainOperations.ui
 
 RESOURCES += resources/main.qrc

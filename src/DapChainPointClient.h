@@ -19,9 +19,9 @@ public:
         static DapChainPointClient _me; return _me;
     }
 
-    void sendMsg (QString a_msg){
+    void sendMsg (QString a_msg);/*{
         Q_UNUSED(a_msg);
-    }
+    }*/
 public slots:
     void readReady();
 signals:
