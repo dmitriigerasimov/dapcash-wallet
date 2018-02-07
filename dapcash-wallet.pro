@@ -62,6 +62,7 @@ FORMS += \
     ui/DapUiScreenDashboard.ui \
     ui/DapUiWidgetChainOperations.ui \
     ui/DapUiWidgetChainBalance.ui \
-    ui/DapUiWidgetChainTransctions.ui
+    ui/DapUiWidgetChainTransctions.ui \
+    ui/DapUiChainNodeLogs.ui
 
 RESOURCES += resources/main.qrc

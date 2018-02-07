@@ -30,6 +30,7 @@ signals:
     void sigNewTransaction(QString a_transaction, QString a_who, QString a_where);
     void sigBalanceChanged(QString a_balance, QString a_simpl, QString a_gold,
                            QString a_another);
+    void sigNewLogSent(QString a_log);
 };
 
 #endif // DAPCHAINPOINTCLIENT_H

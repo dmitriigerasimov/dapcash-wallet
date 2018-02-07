@@ -17,20 +17,20 @@
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="DapUiWidgeChainOperations" name="widget" native="true"/>
+      <widget class="DapUiWidgeChainOperations" name="Operatins" native="true"/>
      </item>
      <item>
-      <widget class="DapUiWidgetChainBalance" name="widget_2" native="true"/>
+      <widget class="DapUiWidgetChainBalance" name="Ballance" native="true"/>
      </item>
      <item>
-      <widget class="DapUiWidgetChainTransctions" name="widget_3" native="true"/>
+      <widget class="DapUiWidgetChainTransctions" name="Trasctions" native="true"/>
      </item>
     </layout>
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
-      <widget class="QWidget" name="widget_4" native="true"/>
+      <widget class="DapUiWidgetChainNodeLogs" name="widget_4" native="true"/>
      </item>
      <item>
       <widget class="QWidget" name="widget_5" native="true"/>
@@ -59,6 +59,12 @@
    <class>DapUiWidgetChainTransctions</class>
    <extends>QWidget</extends>
    <header>src/widgets/DapUiWidgetChainTransctions.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>DapUiWidgetChainNodeLogs</class>
+   <extends>QWidget</extends>
+   <header>src/widgets/DapUiWidgetChainNodeLogs.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
