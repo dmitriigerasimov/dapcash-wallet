@@ -15,15 +15,15 @@ DapUiWidgetChainTransctions::DapUiWidgetChainTransctions(QWidget * a_w) : DapUiW
     connect(&DapChainPointClient::me(), &DapChainPointClient::sigNewTransaction, [=](QString a_trasaction,
             QString a_who, QString a_where){
 
-            if (m_trNumber >= 15){
-                for (int i =1; i++; i<14){
+            if (m_trNumber >= 10){
+                for (int i =1; i++; i<9){
                      QString l_nextTr;
                      QString l_nextWho;
                      bool l_nextWhere;
                      getTrans(this, QString::number(i+1), l_nextTr, l_nextWho, l_nextWhere);
                      initTrans(this, QString::number(i), l_nextTr, l_nextWho, l_nextWhere);
                 }
-                initTrans(this, QString::number(15), a_trasaction, a_who, a_where.toInt());
+                initTrans(this, QString::number(9), a_trasaction, a_who, a_where.toInt());
                // m_trNumber+=1;
             }
             else{
@@ -71,13 +71,13 @@ void DapUiWidgetChainTransctions::getTrans(QWidget* a_w, QString a_name, QString
 
 void DapUiWidgetChainTransctions::initTrans(QWidget* a_w, QString a_name, QString sum, QString who, bool in){
     //summ, who, icon
-    QLabel* l_summ = a_w->findChild<QLabel* >("summ"+a_name);
+    QLabel* l_summ = a_w->findChild<QLabel* >("summ_"+a_name);
     Q_ASSERT(l_summ);
     l_summ->setText(sum);
-    QLabel* l_who = a_w->findChild<QLabel* >("who"+a_name);
+    QLabel* l_who = a_w->findChild<QLabel* >("who_"+a_name);
     Q_ASSERT(l_who);
     l_who->setText(who);
-    QLabel* l_icon = a_w->findChild<QLabel* >("icon"+a_name);
+    QLabel* l_icon = a_w->findChild<QLabel* >("icon_"+a_name);
     Q_ASSERT(l_icon);
     QPixmap pmt ("");
     QPixmap pmf ("");

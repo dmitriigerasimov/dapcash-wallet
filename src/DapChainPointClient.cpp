@@ -5,6 +5,7 @@ DapChainPointClient::DapChainPointClient(QObject *a_p) : QObject(a_p)
     sockCtl = new SapUiSocket();
 
     connect(sockCtl,&SapUiSocket::readyRead,this, &DapChainPointClient::readReady);
+
     /*
     connect(sockCtl,static_cast<void(SapUiSocket::*)(SapUiSocketError)> (&SapUiSocket::error) ,
             this, &SapServiceClient::onCtlSocketError );
@@ -36,6 +37,11 @@ lb_read_str:
 
 void DapChainPointClient::sendMsg(QString a_msg){
     qDebug()<<a_msg + "Recived";
+    if (a_msg=="clicked DapUiWidgeChainOperations moneyRequest"){
+        procCmd("a new_transaction 15 20 1");
+        procCmd("a balanceChanged 15 10 5 0");
+        procCmd("a newLog YouPressedRequest!");
+    }
     //Q_UNUSED(a_msg);
 }
 
