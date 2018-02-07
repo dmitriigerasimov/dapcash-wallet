@@ -60,8 +60,8 @@ HEADERS += \
 
 FORMS += \
     ui/DapUiScreenDashboard.ui \
-    ui/dapuiwidgetchaintransctions.ui \
     ui/DapUiWidgetChainOperations.ui \
-    ui/DapUiWidgetChainBalance.ui
+    ui/DapUiWidgetChainBalance.ui \
+    ui/DapUiWidgetChainTransctions.ui
 
 RESOURCES += resources/main.qrc

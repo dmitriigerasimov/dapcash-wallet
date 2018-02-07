@@ -11,6 +11,10 @@ class DapUiWidgetChainTransctions  : public DapUiWidgetAbstract
     QListWidget *m_list;
 public:
     DapUiWidgetChainTransctions(QWidget * a_w);
+private:
+    void initTrans(QWidget* a_w, QString a_name, QString sum, QString who, bool in);
+    void getTrans(QWidget* a_w, QString a_name, QString sum, QString who, bool in);
+    int m_trNumber;
 };
 
 #endif // DAPUIWIDGETCHAINTRANSCTIONS_H
