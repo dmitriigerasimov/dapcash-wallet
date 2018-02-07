@@ -51,7 +51,8 @@ void DapChainPointClient::procCmd(const QString & a_cmd)
         } else if (infos[1] == "new_transaction") {
             emit sigNewTransaction(infos[2]);
         } else if (infos[1] == "balanceChanged") {
-            emit sigBalanceChanged(infos[2]);
+            emit sigBalanceChanged(infos[2], infos[3], infos[4], infos[5]);
+                                  //summ      simple     gold      other
         }
     }else{
         qWarning() << "[ServiceCtl] Empty reply from backend service";

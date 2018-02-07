@@ -20,7 +20,7 @@
       <widget class="DapUiWidgeChainOperations" name="widget" native="true"/>
      </item>
      <item>
-      <widget class="QWidget" name="widget_2" native="true"/>
+      <widget class="DapUiWidgetChainBalance" name="widget_2" native="true"/>
      </item>
      <item>
       <widget class="QWidget" name="widget_3" native="true"/>
@@ -47,6 +47,12 @@
    <class>DapUiWidgeChainOperations</class>
    <extends>QWidget</extends>
    <header>src/widgets/DapUiWidgetChainOperations.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>DapUiWidgetChainBalance</class>
+   <extends>QWidget</extends>
+   <header>src/widgets/DapUiWidgetChainBallance.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

@@ -27,7 +27,8 @@ public slots:
 signals:
     void sigSetDapUiScreenDashboard();
     void sigNewTransaction(QString a_transaction);
-    void sigBalanceChanged(QString a_txt);
+    void sigBalanceChanged(QString a_balance, QString a_simpl, QString a_gold,
+                           QString a_another);
 };
 
 #endif // DAPCHAINPOINTCLIENT_H
