@@ -11,23 +11,34 @@ DapUiWidgetChainTransctions::DapUiWidgetChainTransctions(QWidget * a_w) : DapUiW
     ui.setupUi(this);
    // QWidget* uiWidget =ui.DapUiWidgetChainTransctions;
     m_trNumber = 1;
+    for (int i=0; i<10; i++){
+        from[i] = false;
+    }
 
     connect(&DapChainPointClient::me(), &DapChainPointClient::sigNewTransaction, [=](QString a_trasaction,
             QString a_who, QString a_where){
 
-            if (m_trNumber >= 10){
-                for (int i =1; i++; i<9){
-                     QString l_nextTr;
-                     QString l_nextWho;
-                     bool l_nextWhere;
+            if (m_trNumber > 10){
+                for (int i =1; i<=9; i++ ){
+                     QString l_nextTr;// ="";
+                     QString l_nextWho;// ="";
+                     bool l_nextWhere;//= true;
                      getTrans(this, QString::number(i+1), l_nextTr, l_nextWho, l_nextWhere);
+                     from[i-1] = from[i];
+                     l_nextWhere =from[i];
+                    /* qDebug()<<i;
+                     qDebug()<<l_nextTr;
+                     qDebug()<<l_nextWho;
+                     qDebug()<<l_nextWhere;*/
                      initTrans(this, QString::number(i), l_nextTr, l_nextWho, l_nextWhere);
                 }
-                initTrans(this, QString::number(9), a_trasaction, a_who, a_where.toInt());
+                initTrans(this, QString::number(10), a_trasaction, a_who, a_where.toInt());
+                from[9]=a_where.toInt();
                // m_trNumber+=1;
             }
             else{
                 initTrans(this, QString::number(m_trNumber), a_trasaction, a_who, a_where.toInt());
+                from[m_trNumber-1]=a_where.toInt();
                 m_trNumber+=1;
             }
     });
@@ -49,29 +60,36 @@ DapUiWidgetChainTransctions::DapUiWidgetChainTransctions(QWidget * a_w) : DapUiW
     });*/
 }
 
-void DapUiWidgetChainTransctions::getTrans(QWidget* a_w, QString a_name, QString sum, QString who, bool in){
-    QLabel* l_summ = a_w->findChild<QLabel* >("summ"+a_name);
+void DapUiWidgetChainTransctions::getTrans(QWidget* a_w, QString a_name, QString& sum, QString& who, bool in){
+    Q_UNUSED(in);
+
+    QLabel* l_summ = a_w->findChild<QLabel* >("summ_"+a_name);
+
     Q_ASSERT(l_summ);
     sum = l_summ->text();
+    qDebug()<<sum;
    // l_summ->setText(sum);
-    QLabel* l_who = a_w->findChild<QLabel* >("who"+a_name);
+    QLabel* l_who = a_w->findChild<QLabel* >("who_"+a_name);
     Q_ASSERT(l_who);
     who = l_who->text();
+    qDebug()<<who;
     //l_who->setText(who);
-    QLabel* l_icon = a_w->findChild<QLabel* >("icon"+a_name);
+    QLabel* l_icon = a_w->findChild<QLabel* >("icon_"+a_name);
     Q_ASSERT(l_icon);
-    if (l_icon->pixmap()->toImage()==QPixmap("").toImage()){ //если иконка вверх, то нам, иначе от нас
+  /*  if (l_icon->pixmap()->toImage()==QPixmap("").toImage()){ //если иконка вверх, то нам, иначе от нас
         in = true;
     }
     else{
         in = false;
-    }
+    }*/
 
 }
 
 void DapUiWidgetChainTransctions::initTrans(QWidget* a_w, QString a_name, QString sum, QString who, bool in){
     //summ, who, icon
     QLabel* l_summ = a_w->findChild<QLabel* >("summ_"+a_name);
+    qDebug()<<a_name;
+
     Q_ASSERT(l_summ);
     l_summ->setText(sum);
     QLabel* l_who = a_w->findChild<QLabel* >("who_"+a_name);

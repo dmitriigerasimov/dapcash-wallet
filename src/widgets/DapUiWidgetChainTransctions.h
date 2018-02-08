@@ -13,8 +13,9 @@ public:
     DapUiWidgetChainTransctions(QWidget * a_w);
 private:
     void initTrans(QWidget* a_w, QString a_name, QString sum, QString who, bool in);
-    void getTrans(QWidget* a_w, QString a_name, QString sum, QString who, bool in);
+    void getTrans(QWidget* a_w, QString a_name, QString& sum, QString& who, bool in);
     int m_trNumber;
+    bool from[10];
 };
 
 #endif // DAPUIWIDGETCHAINTRANSCTIONS_H
