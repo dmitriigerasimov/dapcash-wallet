@@ -3,7 +3,7 @@
 DapChainPointClient::DapChainPointClient(QObject *a_p) : QObject(a_p)
 {
     sockCtl = new SapUiSocket();
-    sockCtl->connectToServer("client891");
+    sockCtl->connectToServer("client893");
 
     connect(sockCtl,&SapUiSocket::readyRead,this, &DapChainPointClient::readReady);
 
