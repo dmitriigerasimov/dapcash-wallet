@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>441</width>
+    <height>352</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,28 +15,112 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1,1">
+     <property name="spacing">
+      <number>0</number>
+     </property>
      <item>
-      <widget class="DapUiWidgeChainOperations" name="Operatins" native="true"/>
+      <widget class="DapUiWidgetAbstract" name="Operatins" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+      </widget>
      </item>
      <item>
-      <widget class="DapUiWidgetChainBalance" name="Ballance" native="true"/>
+      <widget class="DapUiWidgetAbstract" name="Ballance" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+      </widget>
      </item>
      <item>
-      <widget class="DapUiWidgetChainTransctions" name="Trasctions" native="true"/>
+      <widget class="DapUiWidgetAbstract" name="Trasctions" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,1,1">
+     <property name="spacing">
+      <number>0</number>
+     </property>
      <item>
-      <widget class="DapUiWidgetChainNodeLogs" name="widget_4" native="true"/>
+      <widget class="DapUiWidgetAbstract" name="Logs" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+      </widget>
      </item>
      <item>
-      <widget class="QWidget" name="widget_5" native="true"/>
+      <widget class="DapUiWidgetAbstract" name="widget_5" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+      </widget>
      </item>
      <item>
-      <widget class="QWidget" name="widget_6" native="true"/>
+      <widget class="DapUiWidgetAbstract" name="widget_6" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -44,27 +128,9 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>DapUiWidgeChainOperations</class>
+   <class>DapUiWidgetAbstract</class>
    <extends>QWidget</extends>
-   <header>src/widgets/DapUiWidgetChainOperations.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>DapUiWidgetChainBalance</class>
-   <extends>QWidget</extends>
-   <header>src/widgets/DapUiWidgetChainBallance.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>DapUiWidgetChainTransctions</class>
-   <extends>QWidget</extends>
-   <header>src/widgets/DapUiWidgetChainTransctions.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>DapUiWidgetChainNodeLogs</class>
-   <extends>QWidget</extends>
-   <header>src/widgets/DapUiWidgetChainNodeLogs.h</header>
+   <header>src/widgets/DapUiWidgetAbstract.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

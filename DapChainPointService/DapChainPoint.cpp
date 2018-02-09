@@ -32,7 +32,7 @@ void DapChainPoint::sendToClient(QLocalSocket *pSocket, const QString& a_msg1, c
                                  const QString& a_msg4, const QString& a_msg5, const QString& a_msg6){
     if (pSocket->isWritable())
     {
-        pSocket->write(QString("%1%2").arg(a_msg1).arg('\n').toLatin1() );
+        pSocket->write(QString("%1 %2").arg(a_msg1).arg(a_msg2).append(arg('\n').toLatin1() );
     }
 
 }
