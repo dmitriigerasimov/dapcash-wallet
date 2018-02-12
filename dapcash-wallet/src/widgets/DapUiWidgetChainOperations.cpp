@@ -19,15 +19,15 @@ DapUiWidgeChainOperations::DapUiWidgeChainOperations(QWidget * a_w) : DapUiWidge
     Q_ASSERT(l_hold);
 
     connect (l_send, &QPushButton::clicked, [=]{
-        DapChainPointClient::me().sendMsg("clicked DapUiWidgeChainOperations moneySend");
+        DapChainPointClient::me().sendMsg("clickedDapUiWidgeChainOperationsmoneySend");
     });
 
     connect (l_request, &QPushButton::clicked, [=]{
-        DapChainPointClient::me().sendMsg("clicked DapUiWidgeChainOperations moneyRequest");
+        DapChainPointClient::me().sendMsg("clickedDapUiWidgeChainOperationsmoneyRequest");
     });
 
     connect (l_hold, &QPushButton::clicked, [=]{
-        DapChainPointClient::me().sendMsg("clicked DapUiWidgeChainOperations moneyHold");
+        DapChainPointClient::me().sendMsg("clickedDapUiWidgeChainOperationsmoneyHold");
     });
 
    /* QPushButton * l_moneySend    = new QPushButton (this);

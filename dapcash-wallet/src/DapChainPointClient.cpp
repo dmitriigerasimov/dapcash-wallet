@@ -3,7 +3,7 @@
 DapChainPointClient::DapChainPointClient(QObject *a_p) : QObject(a_p)
 {
     sockCtl = new SapUiSocket();
-    sockCtl->connectToServer("client893");
+    sockCtl->connectToServer("client7");
 
     connect(sockCtl,&SapUiSocket::readyRead,this, &DapChainPointClient::readReady);
 
@@ -34,7 +34,7 @@ void DapChainPointClient::onCtlSocketError(SapUiSocketError socketError){
 }
 
 void DapChainPointClient::connectToService(){
-    sockCtl->connectToServer("client2");
+    sockCtl->connectToServer("client7");
     //sockCtl->connectt
 /*#ifdef DAP_UI_SOCKET_TCP
             QTimer::singleShot(500,[=]{sockCtl->connectToHost(QHostAddress("127.0.0.1"),22142);});
@@ -49,6 +49,7 @@ void DapChainPointClient::connectToService(){
 void DapChainPointClient::readReady()
 {
     QString readStr = QString::fromLatin1( sockCtl->readAll());
+
     int nInd;
 lb_read_str:
 
@@ -83,17 +84,17 @@ void DapChainPointClient::procCmd(const QString & a_cmd)
 {
     QStringList infos = a_cmd.split(' ');
     if(infos.length() > 0){
-        if (infos[1] == "set") {
-            if (infos[2] == "DapUiScreenDashboard") {
+        if (infos[0] == "set") {
+            if (infos[1] == "DapUiScreenDashboard") {
                 emit sigSetDapUiScreenDashboard();
             }
-        } else if (infos[1] == "new_transaction") {
-            emit sigNewTransaction(infos[2], infos[3], infos[4]);
-        } else if (infos[1] == "balanceChanged") {
-            emit sigBalanceChanged(infos[2], infos[3], infos[4], infos[5]);
+        } else if (infos[0] == "new_transaction") {
+            emit sigNewTransaction(infos[1], infos[2], infos[3]);
+        } else if (infos[0] == "balanceChanged") {
+            emit sigBalanceChanged(infos[1], infos[2], infos[3], infos[4]);
                                   //summ      simple     gold      other
-        } else if (infos[1]== "newLog"){
-            emit sigNewLogSent(infos[2]); //пока хз как, наверное такы
+        } else if (infos[0]== "newLog"){
+            emit sigNewLogSent(infos[1]); //пока хз как, наверное такы
         }
     }else{
         qWarning() << "[ServiceCtl] Empty reply from backend service";
