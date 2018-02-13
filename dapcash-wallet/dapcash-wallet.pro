@@ -49,7 +49,9 @@ SOURCES += \
     src/widgets/DapUiWidgetChainNodeLogs.cpp \
     src/dialogs/DapUiScreenDialogAbstract.cpp \
     src/widgets/DapUiWidgetAbstract.cpp \
-    src/dialogs/DapUiScreenDialogTemplate.cpp
+    src/dialogs/DapUiScreenDialogTemplate.cpp \
+    src/TreeItem.cpp \
+    src/TreeModel.cpp
 
 HEADERS += \
         src/MainWindow.h \
@@ -62,13 +64,17 @@ HEADERS += \
     src/widgets/DapUiWidgetChainNodeLogs.h \
     src/dialogs/DapUiScreenDialogAbstract.h \
     src/widgets/DapUiWidgetAbstract.h \
-    src/dialogs/DapUiScreenDialogTemplate.h
+    src/dialogs/DapUiScreenDialogTemplate.h \
+    src/TreeItem.h \
+    src/TreeModel.h
 
 FORMS += \
     ui/DapUiScreenDashboard.ui \
     ui/DapUiWidgetChainOperations.ui \
     ui/DapUiWidgetChainBalance.ui \
     ui/DapUiWidgetChainTransctions.ui \
-    ui/DapUiChainNodeLogs.ui
+    ui/DapUiChainNodeLogs.ui \
+    ui/DapUiWidgetChainBlockExplorer.ui \
+    ui/DapUiScreenDialog.ui
 
 RESOURCES += resources/main.qrc

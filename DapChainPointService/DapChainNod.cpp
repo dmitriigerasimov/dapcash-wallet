@@ -1,6 +1,6 @@
 #include "DapChainNod.h"
 
-DapChainNod::DapChainNod()
+DapChainNod::DapChainNod(): public QObject
 {
 
 }

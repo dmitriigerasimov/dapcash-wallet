@@ -2,7 +2,7 @@
 #define DAPCHAINNOD_H
 
 
-class DapChainNod
+class DapChainNod: public QObject
 {
 public:
     DapChainNod();
