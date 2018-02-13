@@ -34,7 +34,7 @@ void DapChainPoint::slotNewConnection(){
     m_clientSocket = m_locServer->nextPendingConnection();
     connect(m_clientSocket, SIGNAL(disconnected()), m_clientSocket, SLOT(deleteLater()));
     connect(m_clientSocket, SIGNAL(readyRead()), this, SLOT(readClient()));
-    sendToClient(m_clientSocket, "newLog", "10", "20", "30", "40");
+    //sendToClient(m_clientSocket, "newLog", "10", "20", "30", "40");
 }
 
 void DapChainPoint::sendToClient(QLocalSocket *pSocket, const QString& a_msg1, const QString& a_msg2,
