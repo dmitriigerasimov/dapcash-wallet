@@ -3,6 +3,7 @@
 #include "DapUiWidgetChainOperations.h"
 #include "DapUiWidgetChainTransctions.h"
 #include "DapUiWidgetChainNodeLogs.h"
+#include "DapUiWidgetChainBlockExplorer.h"
 #include "ui_DapUiScreenDashboard.h"
 
 DapUiScreenDashboard::DapUiScreenDashboard(QObject *a_parent, QStackedWidget * a_sw) : DapUiScreen(a_parent, a_sw)
@@ -32,6 +33,10 @@ void DapUiScreenDashboard::initUi(QWidget * a_w, ScreenVariant a_variant)
     Q_ASSERT(l_trasctions);
     l_trasctions = new DapUiWidgetChainTransctions(a_w);
 
+    DapUiWidgetAbstract* l_explorer = a_w->findChild<DapUiWidgetAbstract* >("BlockExplorer");
+    Q_ASSERT(l_explorer);
+    l_explorer = new DapUiWidgetChainBlockExplorer(a_w);
+
     l_upperLay->addWidget(l_operatins);
     l_upperLay->addWidget(l_ballance);
     l_upperLay->addWidget(l_trasctions);
@@ -44,6 +49,7 @@ void DapUiScreenDashboard::initUi(QWidget * a_w, ScreenVariant a_variant)
     l_logs = new DapUiWidgetChainNodeLogs(a_w);
 
     l_downerLay->addWidget(l_logs);
+    l_downerLay->addWidget(l_explorer);
 
     //Logs
 }

@@ -3,6 +3,7 @@
 
 #include <QLocalSocket>
 #include <QMap>
+#include <DapChainNod.h>
 typedef QLocalSocket SapUiSocket;
 typedef QLocalSocket::LocalSocketError SapUiSocketError;
 
@@ -20,7 +21,7 @@ private:
     void sendToClient(QLocalSocket* pSocket, const QString& a_msg1, const QString& a_msg2,
                       const QString& a_msg4, const QString& a_msg5, const QString& a_msg6);
     void procCmd(const QString & a_cmd);
-
+    QMap<QString, DapChainNod> m_nodesList;
    // QT
 public:
     DapChainPoint();

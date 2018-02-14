@@ -1,9 +1,11 @@
 #include "DapChainNod.h"
+#include <qlocalserver.h>
+#include <qlocalsocket.h>
 
-DapChainNod::DapChainNod(QString nodeName)//: public QObject
+DapChainNod::DapChainNod(QString nodeName)
 {
     m_nodeName  = nodeName;
-    m_locServer = QLocalServer(this);
+    m_locServer = new QLocalServer(this);
 
     if (!m_locServer->listen(m_nodeName))
     {
@@ -11,7 +13,8 @@ DapChainNod::DapChainNod(QString nodeName)//: public QObject
         m_locServer->close();
         return;
     }
-     qDebug()<<m_locServer->serverName();
+    qDebug()<<m_locServer->serverName();
+    m_cache = new DapChainNodeCache();
     connect(m_locServer, SIGNAL(newConnection()), this, SLOT(slotNewConnection()));
 }
 

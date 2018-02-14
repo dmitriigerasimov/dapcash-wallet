@@ -10,16 +10,16 @@ typedef QLocalSocket::LocalSocketError SapUiSocketError;
 class QLocalSocket;
 class QLocalServer;
 
-class DapChainNod //: public QObject
+class DapChainNod : public QObject
 {
-    //Q_OBJECT
+    Q_OBJECT
 private:
     QLocalServer* m_locServer;
     QLocalSocket* m_clientSocket; //надобно и другие способы связи описать, а вообще и этот поправить
 
     QString readStrBuffer;
     QString m_nodeName;
-    DapChainNodeCache m_cache;
+    DapChainNodeCache* m_cache;// это локальный кэш
 
     void procCmd(const QString & a_cmd); //эта штука будет обрабатывать информацию ноды
 public:
