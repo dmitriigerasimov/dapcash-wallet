@@ -12,3 +12,21 @@ DapChainCacheItem* DapChainCacheItem::getParent(){
 bool DapChainCacheItem::isLeaf(){
     return leaf;
 }
+
+void DapChainCacheItem::add(QString key, QVariant item){
+    hashTbl[key]=item;
+
+}
+
+void DapChainCacheItem::del(QString key){
+    hashTbl.remove(key);
+}
+
+QVariant DapChainCacheItem::find(QString key){
+    if (hashTbl.find(key)!=hashTbl.end()){
+        return hashTbl.find(key).value();
+    }
+    else {
+        return false;
+    }
+}
